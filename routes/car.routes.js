@@ -6,6 +6,7 @@ const carRoute = express.Router();
 carRoute.post('/cars/create', async (req, res, next) => {
   try {
     const car = await Car.create(req.body);
+    console.log(car);
     res.json(car);
   } catch (error) {
     next(error);

@@ -9,13 +9,16 @@ let Car = new Schema({
     type: String
   },
   jahrgang: {
-    type: String
+    type: Number
   },
   leistung: {
     type: Number
   },
   preis: {
     type: Number
+  },
+  bild: {
+    type: String
   }
 }, {
   collection: 'cars'
