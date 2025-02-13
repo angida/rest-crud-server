@@ -14,7 +14,7 @@ mongoose.connect(mongoDb.db).then(() => {
   }
 )
   
-const postRoute = require('./routes/post.routes')
+const carRoute = require('./routes/car.routes')
   
 const app = express();
 app.use(bodyParser.json());
@@ -27,7 +27,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist/angular-mean-crud-tutorial')));
   
 /* API root */
-app.use('/api', postRoute)
+app.use('/api', carRoute)
   
 /* PORT */
 const port = process.env.PORT || 8000;
